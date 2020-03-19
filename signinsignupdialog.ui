@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SigninSignupDialog</class>
+ <widget class="QDialog" name="SigninSignupDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>709</width>
+    <height>365</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>701</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="pageSignin"/>
+   <widget class="QWidget" name="pageSignup">
+    <widget class="QLabel" name="labelDisplayMessage">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>330</y>
+       <width>291</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEditForm" name="lineEditPseudo">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>60</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>64</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxCountry">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>230</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>France</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pushButtonSignup">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>300</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Create account</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAddress">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>20</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Address</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPassword">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>100</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLineEditForm" name="lineEditCity">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>110</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>64</number>
+     </property>
+    </widget>
+    <widget class="QLineEditForm" name="lineEditAddress">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>50</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>64</number>
+     </property>
+    </widget>
+    <widget class="QLineEditForm" name="lineEditPassword">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>130</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>32</number>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCity">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>80</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>City</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCountry">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>200</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Coutry</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPostCode">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>140</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Post Code</string>
+     </property>
+    </widget>
+    <widget class="QLineEditForm" name="lineEditPostCode">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>170</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxAge">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>200</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>13</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>14</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>15</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>17</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>18</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>19</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>20</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>21</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>22</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>23</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>24</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>25</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>26</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>27</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>28</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>29</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>30</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>31</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>32</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>33</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>34</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>35</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>36</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>37</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>38</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>39</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>40</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>41</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>42</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>43</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>44</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>45</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>46</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>47</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>48</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>49</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>50</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>51</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>52</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>53</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>54</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>55</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>56</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>57</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>58</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>59</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>60</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>61</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>62</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>63</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>64</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>65</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>66</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>67</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>68</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>69</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>70</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>71</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>72</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>73</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>74</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>75</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>76</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>77</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>78</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>79</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>80</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>81</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>82</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>83</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>84</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>85</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>86</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>87</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>88</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>89</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>90</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>91</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>92</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>93</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>94</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>95</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>96</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>97</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>98</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>99</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>100</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>101</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>102</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>103</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>104</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>105</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>106</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>107</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>108</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>109</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>110</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>111</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>112</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>113</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>114</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>115</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>116</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>117</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>118</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>119</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>120</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>121</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>122</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>123</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>124</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>125</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>126</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>127</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="labelAge">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>170</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Age</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPseudo">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pseudo</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonGoToSigninPage">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>300</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Already have a account ?</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QLineEditForm</class>
+   <extends>QLineEdit</extends>
+   <header>qlineeditform.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
