@@ -5,31 +5,17 @@
 
 #include <QWebEngineView>
 
-#include <QQuickWidget>
-#include <QQuickView>
-#include <QtQuickWidgets/QtQuickWidgets>
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
-#include <QString>
-#include <QDebug>
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    //QQmlApplicationEngine engine;
-    //engine.load(QUrl(QStringLiteral("qrc:/Map/map.qml")));
-
     ui->setupUi(this);
 
-//    QQuickWidget* widget = new QQuickWidget();
-//    widget->setSource(QUrl(QStringLiteral("qrc:/Map/map.qml")));
-//    widget->setResizeMode( QQuickWidget::SizeRootObjectToView );
-//    ui->verticalLayout->addWidget(widget);
-
     QWebEngineView *view = new QWebEngineView();
-    view->load(QUrl("http://www.qt.io/"));
-
+    view->setUrl(QUrl("http://lgt-dominique-villars6.pro.dns-orange.fr/~teamjulie/map.php"));
+    //ui->horizontalLayout->addWidget(view);
+    view->show();
+    ui->horizontalLayout->addWidget(view);
 }
 
 MainWindow::~MainWindow()

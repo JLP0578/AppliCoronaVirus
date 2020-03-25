@@ -2,12 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QGeoCoordinate>
-
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
-#include <QString>
-#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

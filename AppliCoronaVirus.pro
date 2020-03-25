@@ -1,4 +1,4 @@
-QT       += core gui network positioning qml quick quickwidgets webenginewidgets
+QT       += core gui network positioning webengine webenginewidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,25 +25,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-TRANSLATIONS += \
-    AppliCoronaVirus_en_GB.ts
-
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-DISTFILES += \
-    android/AndroidManifest.xml \
-    android/build.gradle \
-    android/gradle/wrapper/gradle-wrapper.jar \
-    android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew \
-    android/gradlew.bat \
-    android/res/values/libs.xml \
-    map.qml
-
-ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
-
-RESOURCES += \
-    qml.qrc
