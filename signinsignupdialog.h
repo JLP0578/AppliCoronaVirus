@@ -18,8 +18,6 @@ public:
     explicit SigninSignupDialog(QWidget *parent = nullptr);
     ~SigninSignupDialog();
 
-    bool checkFieldsSingup();
-
 private slots:
     void on_pushButtonSignup_clicked();
 

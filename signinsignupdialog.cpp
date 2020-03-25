@@ -19,31 +19,6 @@ SigninSignupDialog::~SigninSignupDialog()
     delete ui;
 }
 
-bool SigninSignupDialog::checkFieldsSingup()
-{
-    bool check = true;
-
-    QString pseudo = ui->lineEditPseudo->text();
-    QString password = ui->lineEditPassword->text();
-    int age = ui->comboBoxAge->currentText().toInt();
-    QString address = ui->lineEditAddress->text();
-    QString city = ui->lineEditCity->text();
-    QString postCode = ui->lineEditPostCode->text();
-    QString country = ui->comboBoxCountry->currentText();
-
-    if(pseudo.length() < 6 || pseudo > 64) {
-
-    } else if (password.length() < 6 || password.length() >32) {
-
-    } else if (password.length() < 6 || password.length() >32) {
-
-    } else if (password.length() < 6 || password.length() >32) {
-
-    } else if (password.length() < 6 || password.length() >32) {
-
-    }
-}
-
 void SigninSignupDialog::on_pushButtonSignup_clicked()
 {
 
@@ -70,6 +45,7 @@ void SigninSignupDialog::on_pushButtonSignup_clicked()
    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
    //exécution de la requête http
    QNetworkReply *reply1 = myNWM.post(request,postData);
+
    //attente de la réception complète de la réponse
    while(!reply1->isFinished())
    {
