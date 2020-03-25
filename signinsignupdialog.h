@@ -34,6 +34,10 @@ private slots:
 
     void on_lineEditPostCode_editingFinished();
 
+    void on_pushButtonConnect_clicked();
+
+    void on_pushButtonGoToSignupPage_clicked();
+
 private:
     Ui::SigninSignupDialog *ui;
     QString identifiant,nom,prenom;

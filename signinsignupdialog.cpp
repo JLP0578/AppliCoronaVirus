@@ -6,12 +6,15 @@
 #include <QJsonObject>
 #include <QDebug>
 #define URL "http://lgt-dominique-villars6.pro.dns-orange.fr/~teamjulie/user/"
+#define URLSIGNIN "http://lgt-dominique-villars6.pro.dns-orange.fr/~teamjulie/auth/"
 
 SigninSignupDialog::SigninSignupDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SigninSignupDialog)
 {
     ui->setupUi(this);
+    //espace pour les sessions
+    myNWM.setCookieJar(&cookieJar);
 }
 
 SigninSignupDialog::~SigninSignupDialog()
@@ -123,4 +126,58 @@ void SigninSignupDialog::on_lineEditPostCode_editingFinished()
     } else {
         ui->lineEditPostCode->setDefaultStyle();
     }
+}
+
+void SigninSignupDialog::on_pushButtonConnect_clicked()
+{
+
+    //verif du user et du pass
+    QUrl serviceUrl(URLSIGNIN);
+    QUrl donnees;
+    QUrlQuery query;
+
+
+    query.addQueryItem("pseudo", ui->lineEditPseudoSignin->text());
+    query.addQueryItem("password",ui->lineEditPasswordSignin->text());
+
+    qDebug()<<query.toString();
+
+    donnees.setQuery(query);
+    QByteArray postData(donnees.toString(QUrl::RemoveFragment).remove(0,1).toLatin1());
+    //création de la requête http qui va interroger le service
+    QNetworkRequest request(serviceUrl);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    //exécution de la requête http
+    QNetworkReply *reply1 = myNWM.post(request,postData);
+
+    //attente de la réception complète de la réponse
+    while(!reply1->isFinished())
+    {
+        qApp->processEvents();
+    }
+    //lecture de la réponse
+    QByteArray response_data = reply1->readAll();
+
+
+    //formation du json à partir de la réponse
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(response_data);
+
+    QJsonObject jsonResponseObject = jsonResponse.object();
+    qDebug()<<jsonResponseObject;
+
+    if (jsonResponseObject["auth"].toObject()["status"].toBool()) {
+        ui->labelDisplayMessageSignin->setText(jsonResponseObject["auth"].toObject()["message"].toString());
+        //Reset Fields
+
+    } else {
+        ui->labelDisplayMessageSignin->setText(jsonResponseObject["auth"].toObject()["message"].toString());
+    }
+
+    //nettoyage de reply1
+    reply1->deleteLater();
+}
+
+void SigninSignupDialog::on_pushButtonGoToSignupPage_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
 }
