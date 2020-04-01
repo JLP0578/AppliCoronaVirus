@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "signinsignupdialog.h"
+#include "dailysurveydialog.h"
 
 #include <QApplication>
 
@@ -9,7 +10,7 @@ int main(int argc, char *argv[])
     //MainWindow w;
     //w.show();
 
-    SigninSignupDialog d;
+    DailySurveyDialog d;
     d.show();
 
 
