@@ -16,17 +16,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    dailysurveydialog.cpp \
     main.cpp \
     mainwindow.cpp \
     qlineeditform.cpp \
     signinsignupdialog.cpp
 
 HEADERS += \
+    dailysurveydialog.h \
     mainwindow.h \
     qlineeditform.h \
     signinsignupdialog.h
 
 FORMS += \
+    dailysurveydialog.ui \
     mainwindow.ui \
     signinsignupdialog.ui
 
